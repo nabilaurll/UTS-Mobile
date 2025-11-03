@@ -1,18 +1,30 @@
 import 'package:flutter/material.dart';
 import 'pages/login_page.dart';
+import 'pages/signup_page.dart';
+import 'pages/theater_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const CinemaApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class CinemaApp extends StatelessWidget {
+  const CinemaApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      title: 'Cinema App',
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xFF0F1320),
+        useMaterial3: false,
+      ),
+      initialRoute: '/login',
+      routes: {
+        '/login': (context) => const LoginPage(),
+        '/signup': (context) => const SignUpPage(),
+        '/theater': (context) => const TheaterPage(),
+      },
     );
   }
 }

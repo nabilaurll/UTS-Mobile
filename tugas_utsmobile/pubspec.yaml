@@ -59,7 +59,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - tugas_utsmobile\images\88dd7eaa-c4a3-4a9c-9ca5-af97c8e91ebc.png
+    - assets/images/Bg_mobile.jpg
 
   # To add assets to your application, add an assets section, like this:
   # assets:
